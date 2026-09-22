@@ -1,6 +1,6 @@
 {
   "version": "0.7.0",
   "url": "https://github.com/mharisjamal/qx-signal-trader-releases/releases/download/v0.7.0/qx-signal-trader-v0.7.0.zip",
-  "notes": "Update check and release tooling.",
-  "publishedAt": "2026-09-23T00:00:00.000Z"
+  "notes": "- Feature: update check. Every 2 minutes the extension reads a small public file (github.com/mharisjamal/qx-signal-trader-releases, latest.json) and, when a newer version exists, shows a banner at the top of the panel with the download link and a Log line. Loaded-unpacked extensions cannot update themselves; this makes the update a one-click download plus reload.\n- Tooling: `bash tools/release.sh` builds, tags, pushes and publishes the release on both the private source repo and the public downloads repo.",
+  "publishedAt": "2026-09-22T23:10:03.897Z"
 }
