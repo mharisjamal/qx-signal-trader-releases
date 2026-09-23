@@ -1,6 +1,6 @@
 {
-  "version": "0.8.1",
-  "url": "https://github.com/mharisjamal/qx-signal-trader-releases/releases/download/v0.8.1/qx-signal-trader-v0.8.1.zip",
-  "notes": "- Fix: the SNIPER strategies now follow the client's texts literally. Mandatory confirmations only where a text says \"mandatory\" or \"must agree\": 30S and 30M have none (just \"minimum 6\" / \"minimum 7\"); 1M and 1H only the higher-timeframe trend; 4H the daily trend plus strong rejection (its AVOID \"weak rejection\"). The \"candle closed in the trade direction\" confirmation is still counted everywhere, and mandatory only on 5S, 15S, 5M and 15M, whose texts say so. The high-impact news pause applies only to 5S SNIPER (the only text that names news); Confluence keeps its own news rule.",
-  "publishedAt": "2026-09-23T21:11:39.024Z"
+  "version": "0.8.2",
+  "url": "https://github.com/mharisjamal/qx-signal-trader-releases/releases/download/v0.8.2/qx-signal-trader-v0.8.2.zip",
+  "notes": "- Fix: 15S and 4H SNIPER: \"weak rejection\" is an AVOID rule in their texts, so it is now an AVOID rule (a Settings switch, on by default) instead of a mandatory confirmation. Mandatory confirmations are now exactly the items the texts call mandatory or \"must agree\": 5S sweep + BOS + candle, 15S sweep + BOS + candle, 5M HTF trend + BOS + candle, 15M HTF trend + sweep + BOS + candle, 1M / 1H / 4H the HTF trend, 30S and 30M none.",
+  "publishedAt": "2026-09-23T22:00:10.248Z"
 }
