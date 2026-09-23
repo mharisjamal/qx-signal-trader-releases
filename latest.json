@@ -1,6 +1,6 @@
 {
-  "version": "0.9.0",
-  "url": "https://github.com/mharisjamal/qx-signal-trader-releases/releases/download/v0.9.0/qx-signal-trader-v0.9.0.zip",
-  "notes": "- Feature: RSI + Stochastic + Support/Resistance strategy (client text), four variants with candle size = expiry: 10 s, 15 s, 30 s, 1 min. CALL = strong support + RSI(14) < 30 + Stochastic(5,3,3) bullish crossover + bullish candle; PUT the mirror. All four required. \"Strong\" level = a swing point price turned at twice or more (within 0.3 ATR). No stake preset, no news pause.\n- Feature: 10 s candles (Quotex's 10s chart).\n- Feature: OTC data collection. The extension records 5 s candles per pair (live and from tick history). Log tab: \"Collect OTC history\" scrolls the chart back to fetch older prices (about 10 min per scroll), \"Export 5s candles CSV\" saves them. `node tools/backtest-otc.js` measures the four variants on the exported files.",
-  "publishedAt": "2026-09-23T22:14:44.009Z"
+  "version": "0.10.0",
+  "url": "https://github.com/mharisjamal/qx-signal-trader-releases/releases/download/v0.10.0/qx-signal-trader-v0.10.0.zip",
+  "notes": "- Feature: Bollinger Bands + Stochastic + Price Action strategy (client text), 5 s candles and 5 s expiry. CALL = candle low touches the lower band (BB 20, 2) + bullish rejection (lower wick >= half the range, close in the top 40%) + Stochastic (5,3,3) bullish crossover; PUT the mirror. All three required. No stake preset, no news pause. Included in the OTC backtester.",
+  "publishedAt": "2026-09-23T22:21:24.752Z"
 }
