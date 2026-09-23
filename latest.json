@@ -1,6 +1,6 @@
 {
-  "version": "0.7.0",
-  "url": "https://github.com/mharisjamal/qx-signal-trader-releases/releases/download/v0.7.0/qx-signal-trader-v0.7.0.zip",
-  "notes": "- Feature: update check. Every 2 minutes the extension reads a small public file (github.com/mharisjamal/qx-signal-trader-releases, latest.json) and, when a newer version exists, shows a banner at the top of the panel with the download link and a Log line. Loaded-unpacked extensions cannot update themselves; this makes the update a one-click download plus reload.\n- Tooling: `bash tools/release.sh` builds, tags, pushes and publishes the release on both the private source repo and the public downloads repo.",
-  "publishedAt": "2026-09-22T23:10:03.897Z"
+  "version": "0.7.1",
+  "url": "https://github.com/mharisjamal/qx-signal-trader-releases/releases/download/v0.7.1/qx-signal-trader-v0.7.1.zip",
+  "notes": "- Fix: \"Setup 6/8 - Account balance: not found on the page\". Quotex moved the account label and balance in its header into a closed shadow root that no script can read. The balance now comes from the broker's own socket message (s_balance/list, the same figure the header shows) and demo/live from the page address. Setup shows \"broker reports $99\" / \"page address says demo\". The page header stays as a fallback.",
+  "publishedAt": "2026-09-23T19:28:37.749Z"
 }
