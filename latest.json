@@ -1,6 +1,6 @@
 {
-  "version": "0.8.2",
-  "url": "https://github.com/mharisjamal/qx-signal-trader-releases/releases/download/v0.8.2/qx-signal-trader-v0.8.2.zip",
-  "notes": "- Fix: 15S and 4H SNIPER: \"weak rejection\" is an AVOID rule in their texts, so it is now an AVOID rule (a Settings switch, on by default) instead of a mandatory confirmation. Mandatory confirmations are now exactly the items the texts call mandatory or \"must agree\": 5S sweep + BOS + candle, 15S sweep + BOS + candle, 5M HTF trend + BOS + candle, 15M HTF trend + sweep + BOS + candle, 1M / 1H / 4H the HTF trend, 30S and 30M none.",
-  "publishedAt": "2026-09-23T22:00:10.248Z"
+  "version": "0.9.0",
+  "url": "https://github.com/mharisjamal/qx-signal-trader-releases/releases/download/v0.9.0/qx-signal-trader-v0.9.0.zip",
+  "notes": "- Feature: RSI + Stochastic + Support/Resistance strategy (client text), four variants with candle size = expiry: 10 s, 15 s, 30 s, 1 min. CALL = strong support + RSI(14) < 30 + Stochastic(5,3,3) bullish crossover + bullish candle; PUT the mirror. All four required. \"Strong\" level = a swing point price turned at twice or more (within 0.3 ATR). No stake preset, no news pause.\n- Feature: 10 s candles (Quotex's 10s chart).\n- Feature: OTC data collection. The extension records 5 s candles per pair (live and from tick history). Log tab: \"Collect OTC history\" scrolls the chart back to fetch older prices (about 10 min per scroll), \"Export 5s candles CSV\" saves them. `node tools/backtest-otc.js` measures the four variants on the exported files.",
+  "publishedAt": "2026-09-23T22:14:44.009Z"
 }
