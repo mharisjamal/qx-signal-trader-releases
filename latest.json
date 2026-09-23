@@ -1,6 +1,6 @@
 {
-  "version": "0.8.0",
-  "url": "https://github.com/mharisjamal/qx-signal-trader-releases/releases/download/v0.8.0/qx-signal-trader-v0.8.0.zip",
-  "notes": "- Feature: keep-awake. Why signals came hours apart: Chrome throttles a hidden tab after about 5 minutes and Quotex's socket then dies (live: armed 00:23, \"Broker socket closed\" 00:29, nothing until the tab was looked at 35 minutes later). The strategies were firing fine: replaying 30S SNIPER on the same 75 live candles gives 7 signals in 37 minutes. While Auto-Trade is on the tab now plays an inaudible 20 Hz tone at -60 dB, which Chrome exempts from throttling (a speaker icon shows on the tab). Settings -> Execution -> \"Keep the tab awake while armed\", on by default.",
-  "publishedAt": "2026-09-23T20:10:23.559Z"
+  "version": "0.8.1",
+  "url": "https://github.com/mharisjamal/qx-signal-trader-releases/releases/download/v0.8.1/qx-signal-trader-v0.8.1.zip",
+  "notes": "- Fix: the SNIPER strategies now follow the client's texts literally. Mandatory confirmations only where a text says \"mandatory\" or \"must agree\": 30S and 30M have none (just \"minimum 6\" / \"minimum 7\"); 1M and 1H only the higher-timeframe trend; 4H the daily trend plus strong rejection (its AVOID \"weak rejection\"). The \"candle closed in the trade direction\" confirmation is still counted everywhere, and mandatory only on 5S, 15S, 5M and 15M, whose texts say so. The high-impact news pause applies only to 5S SNIPER (the only text that names news); Confluence keeps its own news rule.",
+  "publishedAt": "2026-09-23T21:11:39.024Z"
 }
