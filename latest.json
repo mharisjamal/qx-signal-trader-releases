@@ -1,6 +1,6 @@
 {
-  "version": "0.10.0",
-  "url": "https://github.com/mharisjamal/qx-signal-trader-releases/releases/download/v0.10.0/qx-signal-trader-v0.10.0.zip",
-  "notes": "- Feature: Bollinger Bands + Stochastic + Price Action strategy (client text), 5 s candles and 5 s expiry. CALL = candle low touches the lower band (BB 20, 2) + bullish rejection (lower wick >= half the range, close in the top 40%) + Stochastic (5,3,3) bullish crossover; PUT the mirror. All three required. No stake preset, no news pause. Included in the OTC backtester.",
-  "publishedAt": "2026-09-23T22:21:24.752Z"
+  "version": "0.10.1",
+  "url": "https://github.com/mharisjamal/qx-signal-trader-releases/releases/download/v0.10.1/qx-signal-trader-v0.10.1.zip",
+  "notes": "- Fix: \"Collect OTC history\" stopped after the first chart scroll that brought no new ticks, even though older history was still there (the chart already held the ticks just behind the view). It now keeps scrolling and stops only after 4 empty scrolls in a row, and the log line also counts the history loads.",
+  "publishedAt": "2026-09-24T00:13:38.680Z"
 }
