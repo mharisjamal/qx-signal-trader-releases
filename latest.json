@@ -1,6 +1,6 @@
 {
-  "version": "0.10.1",
-  "url": "https://github.com/mharisjamal/qx-signal-trader-releases/releases/download/v0.10.1/qx-signal-trader-v0.10.1.zip",
-  "notes": "- Fix: \"Collect OTC history\" stopped after the first chart scroll that brought no new ticks, even though older history was still there (the chart already held the ticks just behind the view). It now keeps scrolling and stops only after 4 empty scrolls in a row, and the log line also counts the history loads.",
-  "publishedAt": "2026-09-24T00:13:38.680Z"
+  "version": "0.10.2",
+  "url": "https://github.com/mharisjamal/qx-signal-trader-releases/releases/download/v0.10.2/qx-signal-trader-v0.10.2.zip",
+  "notes": "Fixes from a six-part review (strategies, delays, price data, trade safety, consistency, security).\n- Safety: the LIVE confirmation shows each loss limit as ON with its value or OFF, and warns when no loss limit is active (all are off by default).\n- Safety: right before the click the bot re-checks the pair, the account (demo/live), live confirmation and that auto-trade is still on; any change aborts the trade.\n- Safety: entry deadline. The click must happen within 30% of the candle (at least 1 s, at most 3 s) after the signal candle closed, otherwise the trade is skipped (\"Too late to enter\").\n- Safety: only one thing drives the Time / Investment boxes and the chart period at a time; no trade while the chart is being switched; no trade while the broker socket is closed or in the 2 s after it reopens.\n- Safety: a trade whose result is missing 15 s after expiry counts as a provisional loss for stop-loss, losses in a row and cooldown until the result arrives; a broker result that arrives after the 10-minute estimate replaces it. Nothing is counted twice.",
+  "publishedAt": "2026-09-24T15:02:53.057Z"
 }
