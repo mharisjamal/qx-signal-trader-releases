@@ -1,6 +1,6 @@
 {
-  "version": "0.12.0",
-  "url": "https://github.com/mharisjamal/qx-signal-trader-releases/releases/download/v0.12.0/qx-signal-trader-v0.12.0.zip",
-  "notes": "- Feature: several trades open at once. New setting \"Trades open at once\" (default 3, 1 to 10; 1 = the old one-at-a-time). The bot only waits while it is placing a trade (the click and the broker's confirmation), not for the whole expiry. A new trade is also held back when the trades still running could push past the loss stop (losses in a row, including the strategy's 3-loss rule, or the daily stop-loss), so several open trades can never overshoot it.\n- Fix: a failed news calendar fetch is retried after 5 minutes instead of 30 (strategies that avoid news give no signal until it loads).\n- Checked live: the keep-awake tone makes Chrome show the speaker icon on the armed Quotex tab, so the tab is not throttled in the background.",
-  "publishedAt": "2026-09-29T17:21:40.041Z"
+  "version": "0.12.1",
+  "url": "https://github.com/mharisjamal/qx-signal-trader-releases/releases/download/v0.12.1/qx-signal-trader-v0.12.1.zip",
+  "notes": "- Fix: when Quotex dropped its connection at the moment of a click, the bot waited 6 s, saw no order and switched auto-trade off (\"Quotex did not confirm the order within 6 s\"). Seen live twice on 2026-09-29 (02:42 and 03:00, both at a reconnect in the same second as the click; Quotex's own order list has no order for either). Now, if the connection dropped around the click, the bot waits up to 15 s for the reconnect and Quotex's re-sent open orders: an order found there is tracked normally, a missing one is logged as \"not placed\" and skipped, and auto-trade stays on. Without a connection drop the old safety stop is unchanged.\n- Log: \"Broker socket open\" is written once per reconnect (Quotex reports it twice). The signal-to-click line no longer claims a delay \"after real time\": the tick delay (feed.latencyMs) includes any PC clock difference (live: Quotex's order times run about 1.2 s behind this PC's clock), so it is shown on its own.",
+  "publishedAt": "2026-09-29T22:11:01.038Z"
 }
