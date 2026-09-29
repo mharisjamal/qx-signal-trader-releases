@@ -1,6 +1,6 @@
 {
-  "version": "0.12.1",
-  "url": "https://github.com/mharisjamal/qx-signal-trader-releases/releases/download/v0.12.1/qx-signal-trader-v0.12.1.zip",
-  "notes": "- Fix: when Quotex dropped its connection at the moment of a click, the bot waited 6 s, saw no order and switched auto-trade off (\"Quotex did not confirm the order within 6 s\"). Seen live twice on 2026-09-29 (02:42 and 03:00, both at a reconnect in the same second as the click; Quotex's own order list has no order for either). Now, if the connection dropped around the click, the bot waits up to 15 s for the reconnect and Quotex's re-sent open orders: an order found there is tracked normally, a missing one is logged as \"not placed\" and skipped, and auto-trade stays on. Without a connection drop the old safety stop is unchanged.\n- Log: \"Broker socket open\" is written once per reconnect (Quotex reports it twice). The signal-to-click line no longer claims a delay \"after real time\": the tick delay (feed.latencyMs) includes any PC clock difference (live: Quotex's order times run about 1.2 s behind this PC's clock), so it is shown on its own.",
-  "publishedAt": "2026-09-29T22:11:01.038Z"
+  "version": "0.12.2",
+  "url": "https://github.com/mharisjamal/qx-signal-trader-releases/releases/download/v0.12.2/qx-signal-trader-v0.12.2.zip",
+  "notes": "- Feature: runs with Chrome minimized. While auto-trade is on (and Keep awake is ticked), the extension also asks Windows not to sleep (chrome.power, new \"power\" permission, no install warning; released when auto-trade stops or the tab closes). The keep-awake tone already keeps Chrome from pausing a hidden or minimized tab.\n- Feature: background health in the Log and Copy diagnostics: \"Page hidden ... keep-awake tone on, PC sleep blocked\" when Chrome is minimized or another tab is shown, and \"Page visible again after N min hidden: X candles closed and were checked, longest timer delay Y s\" when it comes back. Warns while hidden if the tone is not playing (after a reload Chrome needs one click on the page) or if Chrome paused the tab for more than 10 s.",
+  "publishedAt": "2026-09-29T22:41:40.373Z"
 }
